@@ -10,12 +10,10 @@
 
 ```
 Tumor/
-├── docs/                       # Thư mục tài liệu báo cáo, slide và kịch bản thuyết trình
+├── docs/                       # Thư mục tài liệu báo cáo khoa học và slide
 │   ├── Bao_Cao_Khoa_Hoc_Springer_Nature.docx      # Báo cáo khoa học hoàn chỉnh (Word chuẩn Springer)
 │   ├── Bao_Cao_Khoa_Hoc_Springer_Nature.pdf       # Báo cáo khoa học xuất định dạng PDF
-│   ├── Bao_Cao_Khoa_Hoc_Springer_Nature.pptx      # Slide thuyết trình PowerPoint 16:9 (16 Slides)
-│   ├── Bao_Cao_Khoa_Hoc_Springer_Nature_Slide.pdf # Bản xuất PDF của toàn bộ slide thuyết trình
-│   └── Kich_Ban_Thuyet_Trinh_Springer_Nature.docx # Kịch bản thuyết trình chi tiết kèm chú thích
+│   └── Bao_Cao_Khoa_Hoc_Springer_Nature.pptx      # Slide thuyết trình PowerPoint 16:9 (16 Slides)
 │
 ├── WebApp/                     # Hệ thống phần mềm chẩn đoán hình ảnh NeuroScan CADx (Streamlit)
 │   ├── app.py                  # Mã nguồn ứng dụng web chính

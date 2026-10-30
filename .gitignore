@@ -42,5 +42,10 @@ temp_*
 *.tmp
 *.bak
 
+# Private presentation scripts & generated slide PDF
+docs/Kich_Ban_Thuyet_Trinh*
+docs/*_Slide.pdf
+
 nop_bai_drive/
+2351267264_Trần Mạnh Hùng/
 
