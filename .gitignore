@@ -41,3 +41,6 @@ test_*.docx
 temp_*
 *.tmp
 *.bak
+
+nop_bai_drive/
+
