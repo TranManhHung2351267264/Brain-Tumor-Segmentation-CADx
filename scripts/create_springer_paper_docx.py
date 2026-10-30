@@ -336,10 +336,11 @@ def build_paper():
     add_sec_heading("3.1. Dữ liệu nghiên cứu (Datasets)", level=2)
     add_p(
         "Nghiên cứu sử dụng hai bộ dữ liệu độc lập phục vụ quá trình huấn luyện, kiểm chuẩn và thẩm định ngoài: "
-        "(1) Bộ dữ liệu chính BRISC 2025: Gồm 4,499 lát cắt MRI sọ não thu nhận từ thực tế lâm sàng, được phân chia nghiêm ngặt thành tập Huấn luyện "
-        "(Train: 3,467 ảnh - 77.1%), tập Kiểm chuẩn (Validation: 339 ảnh - 7.5%) và tập Kiểm thử độc lập (Test: 693 ảnh - 15.4%). Dữ liệu bao phủ đầy đủ "
-        "3 mặt phẳng giải phẫu (Axial, Coronal, Sagittal) và 4 chuỗi xung chính (T1W, T1c, T2W, FLAIR), mang nhãn chuẩn Ground Truth được gán bởi các bác sĩ "
-        "chẩn đoán hình ảnh thần kinh (Hình 1); "
+        "(1) Bộ dữ liệu chính BRISC 2025: Gồm 4,794 lát cắt MRI sọ não thu nhận từ thực tế lâm sàng, được phân chia nghiêm ngặt thành tập Huấn luyện "
+        "(Train: 3,966 ảnh - 82.7%), tập Kiểm chuẩn (Validation: 135 ảnh - 2.8%) và tập Kiểm thử độc lập (Test: 693 ảnh - 14.5%). Phân bố theo 3 nhóm "
+        "bệnh lý gồm: U thần kinh đệm (Glioma: 1,580 ảnh - 33.0%), U màng não (Meningioma: 1,690 ảnh - 35.3%) và U tuyến yên (Pituitary: 1,524 ảnh - 31.8%). "
+        "Dữ liệu bao phủ đầy đủ 3 mặt phẳng giải phẫu (Axial, Coronal, Sagittal) và 4 chuỗi xung chính (T1W, T1c, T2W, FLAIR), mang nhãn chuẩn Ground Truth "
+        "được gán bởi các bác sĩ chẩn đoán hình ảnh thần kinh (Hình 1); "
         "(2) Bộ dữ liệu kiểm định ngoài của Masoud Nickparvar [12]: Gồm 7,023 ảnh MRI có nguồn gốc từ nhiều bệnh viện và thiết bị quét khác nhau, bao gồm 4 nhóm: "
         "Não lành không có u (No Tumor - 2,000 ảnh), U thần kinh đệm (Glioma - 1,621 ảnh), U màng não (Meningioma - 1,645 ảnh) và U tuyến yên (Pituitary - 1,757 ảnh). "
         "Tập dữ liệu này được sử dụng như một phép thử kiểm tra khả năng chống báo động giả (False Positive) và đánh giá độ bền vững trước hiện tượng dịch chuyển miền dữ liệu (Domain Shift)."
