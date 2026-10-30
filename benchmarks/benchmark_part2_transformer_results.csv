@@ -1,0 +1,3 @@
+Kiến trúc Mô hình,Họ thuật toán,Dice Score (DSC),IoU (%),Sai lệch viền HD95 (mm),ASSD (mm),Tốc độ (FPS),Nhận xét
+ResNeXt-UNet++ (nnU-Net Style),Dense Skip Pathways CNN,0.8277,74.60%,9.03 mm,6.83 mm,36.3,"Bảo toàn độ phân giải không gian rất tốt, các nhánh viền sắc nét"
+SegFormer (Vision Transformer),Self-Attention + All-MLP Decoder,0.8300,74.50%,7.63 mm,5.58 mm,163.6,Đạt độ chính xác cao nhất: nắm bắt tương quan giải phẫu toàn cục cực mạnh

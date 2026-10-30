@@ -1,0 +1,9 @@
+# YOLOv8 Brain Tumor Segmentation Dataset (3-classes)
+path: YOLO
+train: images/train
+val: images/val
+
+names:
+  0: Glioma
+  1: Meningioma
+  2: Pituitary

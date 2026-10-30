@@ -1,0 +1,382 @@
+/* NeuroScan CADx — Clinical Medical UI Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --primary:          #2563EB;
+    --primary-hover:    #1D4ED8;
+    --primary-surface:  rgba(37, 99, 235, 0.08);
+    --secondary:        #0EA5E9;
+    --bg-main:          #090D16;
+    --bg-card:          #0F172A;
+    --bg-card-hover:    #1E293B;
+    --bg-panel:         #0B1120;
+    --border-subtle:    rgba(255, 255, 255, 0.08);
+    --border-strong:    rgba(255, 255, 255, 0.16);
+    --text-primary:     #F8FAFC;
+    --text-secondary:   #94A3B8;
+    --text-muted:       #64748B;
+    --color-glioma:     #EF4444;
+    --color-meningioma: #10B981;
+    --color-pituitary:  #F59E0B;
+    --radius-sm:        6px;
+    --radius-md:        10px;
+    --radius-lg:        14px;
+    --shadow-sm:        0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md:        0 4px 16px rgba(0, 0, 0, 0.4);
+    --font-sans:        'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono:        'JetBrains Mono', monospace;
+}
+
+html, body, [data-testid="stAppViewContainer"] {
+    background-color: var(--bg-main) !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-sans) !important;
+    letter-spacing: -0.01em;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(9, 13, 22, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+/* Sidebar Styling */
+[data-testid="stSidebar"] {
+    background: var(--bg-panel) !important;
+    border-right: 1px solid var(--border-subtle) !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: var(--text-primary) !important;
+    font-family: var(--font-sans) !important;
+}
+
+.clinical-brand {
+    padding: 12px 4px 18px 4px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 16px;
+}
+
+.brand-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(37, 99, 235, 0.15);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    color: #60A5FA;
+    margin-bottom: 8px;
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+.brand-subtitle {
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+/* Top Banner Header */
+.clinical-hero {
+    background: linear-gradient(135deg, #0F172A 0%, #172554 100%);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-md);
+}
+
+.hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.hero-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.hero-desc {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.specs-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.spec-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.74rem;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    border: 1px solid var(--border-subtle);
+    background: rgba(15, 23, 42, 0.8);
+    color: var(--text-secondary);
+}
+
+.spec-chip.active-blue {
+    border-color: rgba(59, 130, 246, 0.4);
+    background: rgba(59, 130, 246, 0.1);
+    color: #93C5FD;
+}
+
+.spec-chip.active-teal {
+    border-color: rgba(16, 185, 129, 0.4);
+    background: rgba(16, 185, 129, 0.1);
+    color: #6EE7B7;
+}
+
+.spec-chip.active-amber {
+    border-color: rgba(245, 158, 11, 0.4);
+    background: rgba(245, 158, 11, 0.1);
+    color: #FCD34D;
+}
+
+/* Card Component */
+.clinical-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+}
+
+.section-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+/* Metric Display Panels */
+.metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.metric-cell {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    border-left: 3px solid #3B82F6;
+}
+
+.metric-cell.green { border-left-color: #10B981; }
+.metric-cell.amber { border-left-color: #F59E0B; }
+.metric-cell.gray  { border-left-color: #64748B; }
+
+.metric-cell-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+
+.metric-cell-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    margin-top: 4px;
+    line-height: 1.1;
+}
+
+.metric-cell-hint {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+/* Finding Cards */
+.finding-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+}
+
+.finding-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.finding-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.finding-sub {
+    font-size: 0.74rem;
+    color: var(--text-muted);
+}
+
+.finding-metric {
+    text-align: right;
+    font-family: var(--font-mono);
+}
+
+.finding-value {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #F8FAFC;
+}
+
+.finding-area {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+}
+
+/* Empty State */
+.clinical-empty {
+    padding: 36px 20px;
+    text-align: center;
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: rgba(15, 23, 42, 0.3);
+}
+
+.clinical-empty-title {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.clinical-empty-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* Status Pills */
+.status-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.74rem;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    margin: 2px 4px 2px 0;
+}
+
+.status-ready {
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.28);
+    color: #34D399;
+}
+
+.status-unavailable {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.28);
+    color: #F87171;
+}
+
+/* Standard Buttons & Controls */
+.stButton > button {
+    border-radius: var(--radius-sm) !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    letter-spacing: 0.01em !important;
+    padding: 8px 18px !important;
+    transition: all 0.15s ease-in-out !important;
+}
+
+.stButton > button[kind="primary"] {
+    background-color: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: 1px solid var(--primary-hover) !important;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background-color: var(--primary-hover) !important;
+    border-color: #1E40AF !important;
+}
+
+.stButton > button[kind="secondary"] {
+    background-color: #1E293B !important;
+    color: #E2E8F0 !important;
+    border: 1px solid var(--border-subtle) !important;
+}
+
+.stButton > button[kind="secondary"]:hover {
+    background-color: #334155 !important;
+    border-color: var(--border-strong) !important;
+}
+
+/* Custom Table */
+.clinical-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-top: 8px;
+}
+
+.clinical-table th {
+    background: #0B1120;
+    color: var(--text-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-strong);
+    text-align: left;
+}
+
+.clinical-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.clinical-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.footer-bar {
+    border-top: 1px solid var(--border-subtle);
+    padding: 20px 0 8px 0;
+    margin-top: 40px;
+    font-size: 0.74rem;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 1.6;
+}

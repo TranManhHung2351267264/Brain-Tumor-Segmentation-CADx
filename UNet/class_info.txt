@@ -1,0 +1,7 @@
+# UNet Mask Label Encoding
+# Pixel Value | Class Name   | Hex Color (visualization)
+# -----------   ----------     -------------------------
+#     0        | Background   | #000000 (Black)
+#     1        | Glioma       | #FF0000 (Red)
+#     2        | Meningioma   | #00FF00 (Green)
+#     3        | Pituitary    | #FFA500 (Orange)

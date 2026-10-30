@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Large Datasets (Downloadable via Kaggle / BRISC 2025 link in README.md)
+Tumor.v1i.coco/
+YOLO/images/
+YOLO/labels/
+UNet/images/
+UNet/masks/
+
+# Duplicate weights (canonical weights are in weights/)
+WebApp/weights/*.pt
+YOLO/weights/
+YOLO/*.pt
+UNet/*.pt
+
+# Duplicate presentation at root (clean master is in docs/)
+/Bao_Cao_Khoa_Hoc_Springer_Nature.pptx
+
+# Temporary / test files
+test_*.pdf
+test_*.docx
+temp_*
+*.tmp
+*.bak
