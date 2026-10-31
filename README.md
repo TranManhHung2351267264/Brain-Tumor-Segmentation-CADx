@@ -49,3 +49,5 @@ Tumor/
 ├── scripts/                    # Các kịch bản tự động hóa chính
 └── Tumor.v1i.coco/             # Bộ dữ liệu sọ não BRISC 2025 gốc
 ```
+
+python -m streamlit run WebApp/app.py

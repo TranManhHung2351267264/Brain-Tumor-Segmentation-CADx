@@ -1,0 +1,20 @@
+{
+  "train": {
+    "total_samples": 3966,
+    "class_counts": {
+      "Glioma": 1194,
+      "Meningioma": 1283,
+      "Pituitary": 1489
+    },
+    "json_path": "D:/Học Sâu và Ứng dụng/Tumor/medsam3/dataset_metadata/train_samples.json"
+  },
+  "val": {
+    "total_samples": 693,
+    "class_counts": {
+      "Glioma": 206,
+      "Meningioma": 236,
+      "Pituitary": 251
+    },
+    "json_path": "D:/Học Sâu và Ứng dụng/Tumor/medsam3/dataset_metadata/val_samples.json"
+  }
+}

@@ -1,0 +1,47 @@
+# Cấu hình Fine-tuning MedSAM3 với LoRA cho bài toán Phân đoạn U Não MRI (BRISC 2025)
+# Mô hình nền tảng: SAM3 (Segment Anything Model 3) + LoRA v1b (lal-Joey/MedSAM3_v1b)
+
+model:
+  name: "facebook/sam3"
+  medsam3_checkpoint: "lal-Joey/MedSAM3_v1b"
+  cache_dir: "./checkpoints"
+
+lora:
+  rank: 8
+  alpha: 16.0
+  dropout: 0.05
+  target_modules: ["q_proj", "v_proj", "k_proj", "out_proj"]
+  apply_to_vision_encoder: true
+  apply_to_text_encoder: false         # Giữ đóng băng Text Encoder để ổn định khái niệm y khoa
+  apply_to_geometry_encoder: false
+  apply_to_detr_encoder: true          # Thích ứng khối giao thoa chú ý
+  apply_to_detr_decoder: true
+  apply_to_mask_decoder: true          # Thích ứng khối gọt giũa bờ viền
+
+data:
+  train_metadata: "medsam3/dataset_metadata/train_samples.json"
+  val_metadata: "medsam3/dataset_metadata/val_samples.json"
+  image_size: 512
+  text_prompts:
+    glioma: "brain glioma tumor, intra-axial infiltrative mass"
+    meningioma: "brain meningioma tumor, extra-axial well-defined lesion"
+    pituitary: "brain pituitary adenoma, sellar region tumor"
+    general: "brain tumor"
+
+training:
+  output_dir: "weights/medsam3_lora_tumor"
+  num_epochs: 30
+  batch_size: 2
+  gradient_accumulation_steps: 4       # Kích thước batch ảo = 2 * 4 = 8
+  learning_rate: 0.0001
+  min_learning_rate: 0.000001
+  weight_decay: 0.01
+  warmup_epochs: 2
+  mixed_precision: "fp16"              # Phù hợp với GPU Tesla T4 / RTX 3090/4090
+  eval_interval: 1
+  save_best_only: true
+  metric_for_best_model: "dice"
+
+loss:
+  dice_weight: 0.6
+  bce_weight: 0.4
