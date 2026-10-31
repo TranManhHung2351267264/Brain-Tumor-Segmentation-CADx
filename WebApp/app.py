@@ -1140,11 +1140,11 @@ def render_docs_page():
 # HÀM CHÍNH
 # ==============================================================================
 def main():
-    selected_models, conf_threshold, mask_opacity = render_sidebar()
+    selected_models, conf_threshold, mask_opacity, enable_skull_strip, enable_clahe, enable_gradcam = render_sidebar()
     page = st.session_state.current_page
 
     if page == "analysis":
-        render_analysis_page(selected_models, conf_threshold, mask_opacity)
+        render_analysis_page(selected_models, conf_threshold, mask_opacity, enable_skull_strip, enable_clahe, enable_gradcam)
     elif page == "benchmark":
         render_benchmark_page()
     elif page == "history":
